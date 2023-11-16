@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to PDF Converter</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column; 
+            background-image: url("https://media.discordapp.net/attachments/989268337886367754/1174635659844136990/4.png?ex=65684fb4&is=6555dab4&hm=0a720bdc27a60dfaa4694bc77d9b2d5fff917ca421feb48e64443844daa50389&=&width=960&height=540");
+            background-size: cover;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input[type="submit"], input[type="file"] {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 15px 30px; 
+            cursor: pointer;
+            border-radius: 20px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image to PDF Converter</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="files[]" multiple accept=".png, .jpg, .jpeg, .gif">
+        <input type="submit" value="Convert to PDF">
+    </form>
+</body>
+</html>
